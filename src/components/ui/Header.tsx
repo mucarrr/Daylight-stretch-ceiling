@@ -79,7 +79,7 @@ export default function Header() {
             aria-expanded={isMobileMenuOpen}
             aria-label="Menüyü aç/kapat"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={36} /> : <Menu size={36} />}
           </button>
         </div>
 

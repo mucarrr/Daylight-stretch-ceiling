@@ -94,7 +94,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="tr" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <JsonLd data={organizationSchema} />
       </head>

@@ -10,41 +10,41 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     id: 'slide-001',
-    title: 'Modern Gergi Tavan Çözümleri',
-    subtitle: 'Mekanınızı dönüştüren, kaliteli ve şık gergi tavan sistemleri',
-    image: '/images/hero/hero-1.jpg',
+    title: 'Lake Gergi Tavan',
+    subtitle: 'Su geçirmez, uzun ömürlü ve kolay temizlenebilir Lake gergi tavan sistemleri ile mekanınızı dönüştürün',
+    image: '/images/hero/hero5.jpeg',
     ctaText: 'Modelleri İncele',
     ctaLink: '/modeller'
   },
   {
     id: 'slide-002',
-    title: 'Premium Lake Gergi Tavan',
-    subtitle: 'Su geçirmez, uzun ömürlü ve kolay temizlenebilir Lake gergi tavanlar',
-    image: '/images/hero/hero-2.jpg',
+    title: 'Baskılı Gergi Tavan',
+    subtitle: 'Hayalinizdeki desenleri ve motifleri gergi tavanınıza yansıtan özel baskılı tasarım çözümleri',
+    image: '/images/hero/hero1.jpeg',
     ctaText: 'Katalogu Görüntüle',
     ctaLink: '/katalog'
   },
   {
     id: 'slide-003',
-    title: 'Özel Baskılı Tasarımlar',
-    subtitle: 'Hayalinizdeki desenleri gergi tavanınıza yansıtın',
-    image: '/images/hero/hero-3.jpg',
+    title: 'Duvar Kağıdı',
+    subtitle: 'Modern ve şık duvar kağıdı çözümleri ile mekanlarınıza yeni bir boyut kazandırın',
+    image: '/images/hero/hero6.jpeg',
     ctaText: 'Projelerimizi İncele',
     ctaLink: '/en-begenilenler'
   },
   {
     id: 'slide-004',
-    title: 'LED Aydınlatma Sistemleri',
-    subtitle: 'Enerji tasarruflu ve modern LED aydınlatma entegrasyonu',
-    image: '/images/hero/hero-4.jpg',
+    title: 'Lineer Aydınlatma',
+    subtitle: 'Enerji tasarruflu ve estetik lineer LED aydınlatma sistemleri ile modern aydınlatma çözümleri',
+    image: '/images/hero/hero3.jpeg',
     ctaText: 'İletişime Geç',
     ctaLink: '/iletisim'
   },
   {
     id: 'slide-005',
-    title: 'Uzman Montaj Hizmeti',
-    subtitle: 'Profesyonel ekibimizle hızlı ve güvenilir montaj',
-    image: '/images/hero/hero-5.jpg',
+    title: 'Lightbox',
+    subtitle: 'Profesyonel lightbox sistemleri ile mekanlarınızda etkileyici görsel deneyimler yaratın',
+    image: '/images/hero/hero4.jpeg',
     ctaText: 'Teklif Al',
     ctaLink: '/iletisim'
   }
