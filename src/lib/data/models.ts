@@ -27,7 +27,7 @@ export const models: Model[] = [
       'Otel odaları',
       'Mağazalar'
     ],
-    image: '/images/models/lake-gergi-tavan.jpg',
+    image: '/images/models/lake.jpeg',
     slug: 'lake-gergi-tavan'
   },
   {
@@ -48,7 +48,7 @@ export const models: Model[] = [
       'Eğitim kurumları',
       'Tema odaları'
     ],
-    image: '/images/models/baskili-gergi-tavan.jpg',
+    image: '/images/models/baski.jpeg',
     slug: 'baskili-gergi-tavan'
   },
   {
@@ -90,7 +90,7 @@ export const models: Model[] = [
       'Evler',
       'Sergi alanları'
     ],
-    image: '/images/models/lineer-aydinlatma.jpg',
+    image: '/images/models/linear-aydinlatma.jpeg',
     slug: 'lineer-aydinlatma'
   },
   {
@@ -111,7 +111,7 @@ export const models: Model[] = [
       'Koridorlar',
       'Ofisler'
     ],
-    image: '/images/models/lightbox.jpg',
+    image: '/images/models/lightbox.jpeg',
     slug: 'lightbox'
   }
 ];

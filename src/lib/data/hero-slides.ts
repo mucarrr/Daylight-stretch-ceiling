@@ -21,7 +21,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Baskılı Gergi Tavan',
     subtitle: 'Hayalinizdeki desenleri ve motifleri gergi tavanınıza yansıtan özel baskılı tasarım çözümleri',
     image: '/images/hero/hero1.jpeg',
-    ctaText: 'Katalogu Görüntüle',
+    ctaText: 'Kataloğu Görüntüle',
     ctaLink: '/katalog'
   },
   {
