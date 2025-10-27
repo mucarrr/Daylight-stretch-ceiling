@@ -32,7 +32,7 @@ export default function HeroSlider() {
               priority
             />
             <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 flex items-end">
+            <div className="absolute inset-0 flex items-end z-10">
               <div className="container mx-auto px-4 pb-16">
                 <div className="max-w-2xl text-white text-center md:text-left">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
@@ -44,7 +44,7 @@ export default function HeroSlider() {
                   <div className="flex justify-center md:justify-start">
                     <Link
                       href={heroSlides[0].ctaLink}
-                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 relative z-20"
                     >
                       {heroSlides[0].ctaText}
                     </Link>
@@ -91,7 +91,7 @@ export default function HeroSlider() {
             <div className="absolute inset-0 bg-black/40" />
             
             {/* Content */}
-            <div className="absolute inset-0 flex items-end">
+            <div className="absolute inset-0 flex items-end z-10">
               <div className="container mx-auto px-4 pb-16">
                 <div className="max-w-2xl text-white text-center md:text-left">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
@@ -103,7 +103,7 @@ export default function HeroSlider() {
                   <div className="flex justify-center md:justify-start">
                     <Link
                       href={slide.ctaLink}
-                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 relative z-20"
                     >
                       {slide.ctaText}
                     </Link>

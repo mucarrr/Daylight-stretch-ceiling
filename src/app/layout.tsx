@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import JsonLd from "@/components/ui/JsonLd";
 
 const inter = Inter({
@@ -104,6 +105,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
