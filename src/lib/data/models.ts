@@ -32,7 +32,7 @@ export const models: Model[] = [
   },
   {
     id: 'baskili',
-    name: 'Baskılı Gergi Tavan',
+    name: 'Baskılı Tavan',
     description: 'Özel baskı teknikleri ile tasarlanan baskılı gergi tavanlar, mekanınıza kişilik katar. Her türlü desen ve renk seçeneği.',
     features: [
       'Özel baskı teknolojisi',

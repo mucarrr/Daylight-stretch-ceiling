@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function EnBegenilenlerPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">

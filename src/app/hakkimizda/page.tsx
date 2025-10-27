@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function HakkimizdaPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -37,28 +37,32 @@ export default function HakkimizdaPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  2014 yılında kurulan Daylight Gergi Tavan, sektörde 10 yılı aşkın deneyimiyle 
-                  müşterilerine en kaliteli gergi tavan çözümlerini sunmaktadır.
+                  Daylight Gergi Tavan, sektörde yıllarca edinilen deneyimle kurulmuş 
+                  bir firmadır. Büyük şirketlerde çalışarak kazanılan uzmanlık ve 
+                  birikim, daha kişisel ve kaliteli hizmet sunma arzusuyla birleşti.
                 </p>
                 <p>
-                  Başlangıçta küçük bir atölye olarak faaliyet gösteren firmamız, 
-                  kaliteli işçilik ve müşteri memnuniyeti odaklı yaklaşımıyla hızla büyümüş 
-                  ve bugün sektörün önde gelen firmaları arasında yer almıştır.
+                  2014 yılında kurulan firmamız, büyük firmaların kalite standartlarını 
+                  koruyarak, daha samimi ve müşteri odaklı bir yaklaşım benimser. 
+                  Bürokrasiden uzak, her projeye özel ilgi gösteren bir anlayışla çalışır.
                 </p>
                 <p>
-                  Modern teknoloji, kaliteli malzeme ve uzman ekibimizle her projede 
-                  mükemmellik hedefliyoruz. Müşterilerimizin hayallerini gerçeğe dönüştürmek 
-                  için çalışmaya devam ediyoruz.
+                  Yılların deneyimini taşıyan, müşteri memnuniyetini ön planda tutan 
+                  bir anlayışla çalışıyoruz. Her projede kalite ve güvenilirliği, 
+                  kişisel hizmet anlayışıyla birleştiriyoruz.
                 </p>
               </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/about/company-story.jpg"
-                alt="Daylight Gergi Tavan Hikayesi"
-                fill
-                className="object-cover"
-              />
+            <div className="bg-gray-100 rounded-lg p-8 h-96 flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="text-white" size={48} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">15+ Yıllık Deneyim</h3>
+                <p className="text-gray-600 text-lg">
+                  Sektörde edinilen uzmanlık ve birikim
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -190,48 +194,6 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ekibimiz
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Alanında uzman, deneyimli ve müşteri odaklı ekibimizle hizmetinizdeyiz.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ahmet Yılmaz</h3>
-              <p className="text-gray-600 mb-2">Kurucu & Genel Müdür</p>
-              <p className="text-sm text-gray-500">
-                15 yıllık sektör deneyimi ile firmamızın kurucusu
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Mehmet Kaya</h3>
-              <p className="text-gray-600 mb-2">Teknik Müdür</p>
-              <p className="text-sm text-gray-500">
-                Montaj ve teknik konularda 12 yıllık uzman
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ayşe Demir</h3>
-              <p className="text-gray-600 mb-2">Müşteri İlişkileri</p>
-              <p className="text-sm text-gray-500">
-                Müşteri memnuniyeti ve proje yönetimi uzmanı
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-900 text-white">

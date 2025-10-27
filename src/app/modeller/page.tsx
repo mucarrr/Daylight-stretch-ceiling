@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ModellerPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -43,10 +43,47 @@ export default function ModellerPage() {
                       className="object-cover"
                     />
                   </div>
+                  
+                  {/* Uygulama Alanları - Resim altında */}
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Uygulama Alanları:</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {model.applications.map((application, appIndex) => (
+                        <span 
+                          key={appIndex}
+                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                        >
+                          {application}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* CTA - Resim altında */}
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href="/katalog"
+                      className="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-medium rounded-xl hover:from-gray-800 hover:to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap"
+                    >
+                      <span>Katalogu İncele</span>
+                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                    <Link
+                      href="/iletisim"
+                      className="group relative inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-medium rounded-xl border-2 border-gray-200 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap"
+                    >
+                      <span>Teklif Al</span>
+                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="lg:w-1/2 flex flex-col justify-center">
+                <div className="lg:w-1/2 flex flex-col justify-start">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     {model.name}
                   </h2>
@@ -68,36 +105,7 @@ export default function ModellerPage() {
                     </ul>
                   </div>
 
-                  {/* Applications */}
-                  <div className="mb-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Uygulama Alanları:</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {model.applications.map((application, appIndex) => (
-                        <span 
-                          key={appIndex}
-                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
-                        >
-                          {application}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
 
-                  {/* CTA */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
-                      href="/katalog"
-                      className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 text-center"
-                    >
-                      Katalogu İncele
-                    </Link>
-                    <Link
-                      href="/iletisim"
-                      className="inline-block border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors duration-200 text-center"
-                    >
-                      Teklif Al
-                    </Link>
-                  </div>
                 </div>
               </div>
             ))}
@@ -105,24 +113,6 @@ export default function ModellerPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Hangi Modeli Seçeceğinizi Bilemiyor musunuz?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Uzman ekibimiz size en uygun modeli seçmenizde yardımcı olacak. 
-            Ücretsiz keşif ve danışmanlık hizmetimizden yararlanın.
-          </p>
-          <Link
-            href="/iletisim"
-            className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-          >
-            Ücretsiz Danışmanlık Al
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

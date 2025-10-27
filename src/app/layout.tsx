@@ -101,9 +101,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <Header />
-        <main>
-          {children}
-        </main>
+              <main>
+                {children}
+              </main>
         <Footer />
         <WhatsAppButton />
       </body>
