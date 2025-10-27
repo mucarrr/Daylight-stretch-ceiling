@@ -18,27 +18,44 @@ export const metadata: Metadata = {
   authors: [{ name: "Daylight Gergi Tavan" }],
   creator: "Daylight Gergi Tavan",
   publisher: "Daylight Gergi Tavan",
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://daylightgergitavan.com'),
+  metadataBase: new URL('https://daylight-phi.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Daylight Gergi Tavan - Modern Gergi Tavan Çözümleri",
     description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün. Kaliteli malzeme, uzman montaj ve müşteri memnuniyeti odaklı hizmet.",
-    url: 'https://daylightgergitavan.com',
+    url: 'https://daylight-phi.vercel.app',
     siteName: 'Daylight Gergi Tavan',
     locale: 'tr_TR',
     type: 'website',
+    images: [
+      {
+        url: 'https://daylight-phi.vercel.app/image.png',
+        width: 300,
+        height: 120,
+        alt: 'Daylight Gergi Tavan Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Daylight Gergi Tavan - Modern Gergi Tavan Çözümleri",
     description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün.",
+    images: ['https://daylight-phi.vercel.app/image.png'],
   },
   robots: {
     index: true,
