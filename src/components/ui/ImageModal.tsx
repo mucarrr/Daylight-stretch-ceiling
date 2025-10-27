@@ -76,12 +76,6 @@ export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title 
             />
           </div>
           
-          {/* Title */}
-          {title && (
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <h3 className="text-white text-xl font-semibold">{title}</h3>
-            </div>
-          )}
         </div>
       </div>
     </div>
