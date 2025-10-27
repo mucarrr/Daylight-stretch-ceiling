@@ -64,13 +64,15 @@ export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title 
         
         {/* Image Container */}
         <div className="relative bg-white rounded-lg overflow-hidden shadow-2xl">
-          <div className="relative w-full h-[70vh] min-h-[400px]">
+          <div className="relative w-full h-[80vh] min-h-[500px]">
             <Image
               src={imageSrc}
               alt={imageAlt}
               fill
               className="object-contain"
               priority
+              quality={95}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
             />
           </div>
           
