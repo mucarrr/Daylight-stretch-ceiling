@@ -80,61 +80,33 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
         </div>
       </section>
 
-      {/* Catalog Grid */}
+      {/* Gallery Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           {currentItems.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
                 {currentItems.map((item) => (
-                  <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div className="relative h-48">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                  <div key={item.id} className="group relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                     
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                          {item.modelType}
-                        </span>
-                        {item.price && (
-                          <span className="text-sm font-semibold text-gray-900">
-                            {item.price}
-                          </span>
-                        )}
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center text-white">
+                        <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-200 mb-3">{item.modelType}</p>
+                        <Link
+                          href="/iletisim"
+                          className="inline-block bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
+                        >
+                          Teklif Al
+                        </Link>
                       </div>
-                      
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h3>
-                      
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                        {item.description}
-                      </p>
-                      
-                      <div className="mb-4">
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Özellikler:</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          {item.features.slice(0, 2).map((feature, index) => (
-                            <li key={index} className="flex items-center">
-                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <Link
-                        href="/iletisim"
-                        className="inline-block w-full text-center bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-200"
-                      >
-                        Teklif Al
-                      </Link>
                     </div>
                   </div>
                 ))}

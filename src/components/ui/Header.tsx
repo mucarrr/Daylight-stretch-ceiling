@@ -12,6 +12,7 @@ const navigation = [
   { name: 'Modeller', href: '/modeller' },
   { name: 'En Beğenilenler', href: '/en-begenilenler' },
   { name: 'Katalog', href: '/katalog' },
+  { name: 'SSS', href: '/sss' },
   { name: 'İletişim', href: '/iletisim' },
 ];
 
