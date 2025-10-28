@@ -8,9 +8,16 @@ export interface CatalogItem {
   features: string[];
 }
 
-// 127 fotoğraf için otomatik oluşturulan katalog verisi
+// 119 fotoğraf için otomatik oluşturulan katalog verisi (silinen resimler: 27,42,43,55,70,79,89,103)
 export const catalogItems: CatalogItem[] = Array.from({ length: 127 }, (_, i) => {
   const num = i + 1;
+  
+  // Silinen resimleri atla
+  const deletedImages = [27, 42, 43, 55, 70, 79, 89, 103];
+  if (deletedImages.includes(num)) {
+    return null;
+  }
+  
   const categories = ['Lake', 'Baskılı', 'Duvar Kağıdı', 'Lineer Aydınlatma', 'Lightbox', 'Modern', 'Klasik', 'Premium'];
   const category = categories[i % categories.length];
   
@@ -28,4 +35,4 @@ export const catalogItems: CatalogItem[] = Array.from({ length: 127 }, (_, i) =>
       'Kolay temizlik'
     ]
   };
-});
+}).filter(Boolean) as CatalogItem[];
