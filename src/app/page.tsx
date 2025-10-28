@@ -6,8 +6,8 @@ import { models } from '@/lib/data/models';
 import { featuredProjects } from '@/lib/data/featured';
 
 export default function Home() {
-  // İlk 5 modeli göster
-  const featuredModels = models.slice(0, 5);
+  // İlk 6 modeli göster (Matrix dahil)
+  const featuredModels = models.slice(0, 6);
   
   // Slider tüm öne çıkanları gösterecek
 

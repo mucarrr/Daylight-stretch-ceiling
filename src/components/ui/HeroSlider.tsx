@@ -24,13 +24,31 @@ export default function HeroSlider() {
       <div className="relative h-[95vh] min-h-[700px] overflow-hidden pt-32">
         <div className="relative h-full">
           <div className="absolute inset-0">
-            <Image
-              src={heroSlides[0].image}
-              alt={heroSlides[0].title}
-              fill
-              className="object-cover"
-              priority
-            />
+            {heroSlides[0].video ? (
+              <video
+                src={heroSlides[0].video}
+                poster={heroSlides[0].image}
+                className="w-full h-full object-cover object-center"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onTimeUpdate={(e) => {
+                  if (e.currentTarget.currentTime >= 3) {
+                    e.currentTarget.currentTime = 0;
+                  }
+                }}
+              />
+            ) : (
+              <Image
+                src={heroSlides[0].image}
+                alt={heroSlides[0].title}
+                fill
+                className="object-cover object-center"
+                priority
+              />
+            )}
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 flex items-end z-10">
               <div className="container mx-auto px-4 pb-16">
@@ -81,13 +99,31 @@ export default function HeroSlider() {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              priority={index === 0}
-            />
+            {slide.video ? (
+              <video
+                src={slide.video}
+                poster={slide.image}
+                className="w-full h-full object-cover object-center"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onTimeUpdate={(e) => {
+                  if (e.currentTarget.currentTime >= 3) {
+                    e.currentTarget.currentTime = 0;
+                  }
+                }}
+              />
+            ) : (
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover object-center"
+                priority={index === 0}
+              />
+            )}
             <div className="absolute inset-0 bg-black/40" />
             
             {/* Content */}

@@ -111,5 +111,27 @@ export const models: Model[] = [
     ],
     image: '/images/models/lightbox.jpeg',
     slug: 'lightbox'
+  },
+  {
+    id: 'matrix',
+    name: 'Matrix Gergi Tavan',
+    description: 'Özel Matrix desenli gergi tavan sistemi ile mekanınıza modern ve şık bir görünüm kazandırın. LED aydınlatma ile entegre çalışır.',
+    features: [
+      'LED aydınlatma entegrasyonu',
+      'Özel Matrix deseni',
+      'Uzaktan kumanda',
+      'Renk değiştirme özelliği',
+      'Enerji tasarrufu'
+    ],
+    applications: [
+      'Ofisler',
+      'Restoranlar',
+      'Barlar',
+      'Eğlence mekanları',
+      'Modern evler'
+    ],
+    image: '/images/models/matrix.mp4',
+    video: '/images/models/matrix.mp4',
+    slug: 'matrix-gergi-tavan'
   }
 ];

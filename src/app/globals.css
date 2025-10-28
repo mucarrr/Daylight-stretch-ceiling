@@ -28,4 +28,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  
+  .duvar-kagidi-crop {
+    object-fit: cover;
+    object-position: center top;
+  }
 }
