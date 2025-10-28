@@ -10,9 +10,10 @@ interface ImageModalProps {
   imageSrc: string;
   imageAlt: string;
   title?: string;
+  description?: string;
 }
 
-export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title }: ImageModalProps) {
+export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title, description }: ImageModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -76,6 +77,21 @@ export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title 
             />
           </div>
           
+          {/* Title and Description */}
+          {(title || description) && (
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+              {title && (
+                <h3 className="text-white text-xl font-semibold mb-2">
+                  {title}
+                </h3>
+              )}
+              {description && (
+                <p className="text-white/90 text-sm leading-relaxed">
+                  {description}
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

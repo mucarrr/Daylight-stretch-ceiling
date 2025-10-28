@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
@@ -7,8 +8,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { featuredProjects } from '@/lib/data/featured';
+import ImageModal from './ImageModal';
 
 export default function FeaturedProjectsSlider() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+  } | null>(null);
   return (
     <div className="relative">
       <Swiper
@@ -29,13 +37,28 @@ export default function FeaturedProjectsSlider() {
         {featuredProjects.map((project) => (
           <SwiperSlide key={project.id}>
             <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
-              <div className="relative h-48 overflow-hidden">
+              <div 
+                className="relative h-48 overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage({
+                  src: project.image,
+                  alt: project.title,
+                  title: project.title,
+                  description: project.description
+                })}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                      Büyüt
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="p-6">
@@ -54,6 +77,18 @@ export default function FeaturedProjectsSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+          title={selectedImage.title}
+          description={selectedImage.description}
+        />
+      )}
     </div>
   );
 }

@@ -11,7 +11,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-001',
     title: 'Optik Projesi',
-    description: 'Beyaz Lake gergi tavan ile tasarlanan modern villa projesi. Minimalist tasarım ve mükemmel işçilik.',
+    description: 'Duvar ışıklandırması ile tasarlanan modern optik mağazası. Profesyonel aydınlatma ve ürün sergileme çözümleri.',
     image: '/images/featured/fav1.jpeg',
     location: 'İstanbul',
     year: '2024'
@@ -19,15 +19,15 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-002',
     title: 'Eczane Projesi',
-    description: 'Baskılı gergi tavan ile tasarlanan çocuk odası. Bulut deseni ve renkli aydınlatma ile eğlenceli atmosfer.',
+    description: 'Modern eczane tasarımı ile hijyenik ve güvenli ortam. Müşteri konforu ve profesyonel hizmet odaklı çözüm.',
     image: '/images/featured/fav2.jpeg',
     location: 'Canakkale',
     year: '2024'
   },
   {
     id: 'featured-003',
-    title: 'Eczane Projesi',
-    description: 'Lineer LED aydınlatma sistemi ile tasarlanan modern ofis kompleksi. Enerji tasarrufu ve estetik bir arada.',
+    title: 'Eczane',
+    description: 'Duvar aydınlatma sistemi ile tasarlanan modern eczane. Profesyonel ışıklandırma ve hijyenik ortam.',
     image: '/images/featured/fav3.jpeg',
     location: 'Canakkale Burda AVM',
     year: '2023'
@@ -35,7 +35,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-008',
     title: 'Otel Projesi',
-    description: 'Premium Lightbox sistemi ile tasarlanan lüks otel odası. RGB aydınlatma ve uzaktan kumanda özelliği.',
+    description: 'Modern tavan ve aydınlatma seçenekleri ile otelinizin dış görünümünü şık ve profesyonel hale getirebilirsiniz.',
     image: '/images/featured/fav8.jpeg',
     location: 'Istanbul',
     year: '2024'
@@ -43,7 +43,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-005',
     title: 'Eczane Projesi',
-    description: 'Duvar kağıdı ve Lake gergi tavan kombinasyonu ile tasarlanan şık restoran. Sıcak ve davetkar atmosfer.',
+    description: 'Modern eczane tasarımı ile temiz ve hijyenik ortam. Profesyonel görünüm ve müşteri memnuniyeti odaklı çözüm.',
     image: '/images/featured/fav5.jpeg',
     location: 'Canakkale',
     year: '2023'
@@ -51,7 +51,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-006',
     title: 'Eczane Projesi',
-    description: 'Doğa temalı baskılı gergi tavan ile tasarlanan spa merkezi. Huzurlu ve rahatlatıcı atmosfer.',
+    description: 'Baskılı gergi tavan ile tasarlanan modern eczane.',
     image: '/images/featured/fav6.jpeg',
     location: 'Bursa',
     year: '2024'
@@ -59,7 +59,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-009',
     title: 'Spor Salonu Projesi',
-    description: 'Doğa temalı baskılı gergi tavan ile tasarlanan spa merkezi. Huzurlu ve rahatlatıcı atmosfer.',
+    description: 'Lineer LED aydınlatma sistemi ile tasarlanan modern spor salonu. Enerji tasarrufu ve profesyonel aydınlatma.',
     image: '/images/featured/fav9.jpeg',
     location: 'İstanbul',
     year: '2024'
@@ -67,17 +67,17 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-010',
     title: 'Kuyumcu Projesi',
-    description: 'Doğa temalı baskılı gergi tavan ile tasarlanan spa merkezi. Huzurlu ve rahatlatıcı atmosfer.',
+    description: 'Lightbox sistemi ile tasarlanan modern kuyumcu mağazası.',
     image: '/images/featured/fav10.jpeg',
     location: 'İstanbul',
     year: '2024'
   },
   {
     id: 'featured-011',
-    title: 'Konut Projesi',
-    description: 'Doğa temalı baskılı gergi tavan ile tasarlanan spa merkezi. Huzurlu ve rahatlatıcı atmosfer.',
+    title: 'AVM Projesi',
+    description: 'Baskılı gergi tavan ile tasarlanan modern AVM projesi. Özel desenler ve kişiselleştirilebilir tasarım seçenekleri.',
     image: '/images/featured/fav11.jpeg',
-    location: 'Kocaeli',
+    location: 'Kocaeli NCIT AVM',
     year: '2024'
   }
   
