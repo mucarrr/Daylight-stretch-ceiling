@@ -11,7 +11,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-001',
     title: 'Optik Projesi',
-    description: 'Duvar ışıklandırması ile tasarlanan modern optik mağazası. Profesyonel aydınlatma ve ürün sergileme çözümleri.',
+    description: 'Duvarlara uygulanan gergiler ile tasarlanan modern optik mağazası. Profesyonel aydınlatma ve ürün sergileme çözümleri.',
     image: '/images/featured/fav1.jpeg',
     location: 'İstanbul',
     year: '2024'
@@ -51,7 +51,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-006',
     title: 'Eczane Projesi',
-    description: 'Baskılı gergi tavan ile tasarlanan modern eczane.',
+    description: 'Modern ve şık tasarımlı gergi tavan ile tasarlanan eczane. Hijyenik ve profesyonel ortam.',
     image: '/images/featured/fav6.jpeg',
     location: 'Bursa',
     year: '2024'
