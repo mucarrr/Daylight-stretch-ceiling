@@ -54,13 +54,11 @@ export const models: Model[] = [
   {
     id: 'duvar-kagidi',
     name: 'Duvar Kağıdı',
-    description: 'Gergi tavan üzerine uygulanan duvar kağıdı çözümleri ile mekanınızı dönüştürün. Estetik ve pratik bir seçim.',
+    description: 'Duvar kağıdı çözümleri ile mekanınıza ferahlık ve şıklık kazandırın. Estetik ve pratik bir seçim.',
     features: [
       'Kolay uygulama',
       'Geniş desen yelpazesi',
-      'Su geçirmez',
-      'Kolay değiştirilebilir',
-      'Ekonomik çözüm'
+      'Silinebilir'
     ],
     applications: [
       'Yatak odaları',
@@ -98,11 +96,9 @@ export const models: Model[] = [
     name: 'Lightbox',
     description: 'İç aydınlatmalı gergi tavan sistemleri ile mekanınızı aydınlatın. Hem dekoratif hem de fonksiyonel çözüm.',
     features: [
-      'İç aydınlatma',
-      'Çoklu renk seçenekleri',
-      'Uzaktan kumanda',
-      'Enerji verimli',
-      'Kolay montaj'
+      'İç ve dış aydınlatma',
+      'Baskılı modeller',
+      'Mağaza ve iş yerleri'
     ],
     applications: [
       'Yatak odaları',

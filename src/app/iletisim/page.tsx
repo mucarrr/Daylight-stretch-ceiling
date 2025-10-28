@@ -121,7 +121,7 @@ export default function IletisimPage() {
               <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">🔍</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Ücretsiz Keşif</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Profesyonel Keşif</h3>
               <p className="text-gray-600 text-sm">
                 Mekanınızı inceleyerek en uygun çözümü belirliyoruz
               </p>
@@ -131,7 +131,7 @@ export default function IletisimPage() {
               <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">📋</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Ücretsiz Teklif</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Özel Teklif</h3>
               <p className="text-gray-600 text-sm">
                 Detaylı ve şeffaf fiyat teklifi sunuyoruz
               </p>
