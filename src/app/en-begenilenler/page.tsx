@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { featuredProjects } from '@/lib/data/featured';
-
-export const metadata: Metadata = {
-  title: "En Beğenilen Projeler - Daylight Gergi Tavan",
-  description: "Müşterilerimizin memnuniyetle kullandığı, öne çıkan gergi tavan projelerimizi inceleyin. Lake, baskılı, duvar kağıdı, lineer aydınlatma ve lightbox örnekleri.",
-  keywords: "gergi tavan projeleri, gergi tavan örnekleri, lake gergi tavan projeleri, baskılı gergi tavan örnekleri, gergi tavan galeri",
-};
+import ImageModal from '@/components/ui/ImageModal';
 
 export default function EnBegenilenlerPage() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    title: string;
+  } | null>(null);
+
   return (
     <div className="min-h-screen pt-32">
       {/* Hero Section */}
@@ -33,46 +36,40 @@ export default function EnBegenilenlerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
               <div key={project.id} className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="relative h-64 overflow-hidden">
+                <div 
+                  className="relative h-64 overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedImage({
+                    src: project.image,
+                    alt: project.title,
+                    title: project.title
+                  })}
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-sm font-medium text-gray-900">{project.year}</span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-sm font-medium text-gray-900">{project.location}</span>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white/90 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                        Büyüt
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                      {project.modelType}
-                    </span>
-                    <span className="text-sm text-gray-400">{project.year}</span>
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="text-sm text-gray-400">{project.location}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 line-clamp-3">
                     {project.description}
                   </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{project.location}</span>
-                    <Link
-                      href="/iletisim"
-                      className="text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
-                    >
-                      Detaylar →
-                    </Link>
-                  </div>
                 </div>
               </div>
             ))}
@@ -218,6 +215,17 @@ export default function EnBegenilenlerPage() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+          title={selectedImage.title}
+        />
+      )}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import HeroSlider from '@/components/ui/HeroSlider';
 import ModelCard from '@/components/ui/ModelCard';
-import FeaturedProjectCard from '@/components/ui/FeaturedProjectCard';
+import FeaturedProjectsSlider from '@/components/ui/FeaturedProjectsSlider';
 import { models } from '@/lib/data/models';
 import { featuredProjects } from '@/lib/data/featured';
 
@@ -9,8 +9,7 @@ export default function Home() {
   // İlk 5 modeli göster
   const featuredModels = models.slice(0, 5);
   
-  // İlk 4 öne çıkan projeyi göster
-  const featuredProjectsPreview = featuredProjects.slice(0, 4);
+  // Slider tüm öne çıkanları gösterecek
 
   return (
     <div className="min-h-screen">
@@ -95,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* En Beğenilenler Snippet */}
+      {/* En Beğenilenler - Slider */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -106,23 +105,10 @@ export default function Home() {
               Müşterilerimizin memnuniyetle kullandığı, öne çıkan projelerimizi keşfedin.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {featuredProjectsPreview.map((project) => (
-              <FeaturedProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                location={project.location}
-                modelType={project.modelType}
-                year={project.year}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center">
+
+          <FeaturedProjectsSlider />
+
+          <div className="text-center mt-10">
             <Link
               href="/en-begenilenler"
               className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200"

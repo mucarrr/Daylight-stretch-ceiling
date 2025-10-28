@@ -28,9 +28,6 @@ export default function FeaturedProjectCard({
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-          <span className="text-sm font-medium text-gray-900">{year}</span>
-        </div>
       </div>
       
       <div className="p-6">

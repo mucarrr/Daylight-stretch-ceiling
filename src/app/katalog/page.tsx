@@ -111,42 +111,73 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
 
               {/* Pagination */}
               {totalPages > 1 && (
-                <div className="flex justify-center items-center space-x-2">
+                <div className="flex justify-center items-center space-x-1 px-4">
                   {/* Previous Button */}
                   {currentPage > 1 && (
                     <Link
                       href={`/katalog?page=${currentPage - 1}`}
-                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                      className="px-2 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-sm sm:text-base sm:px-4"
                       scroll={false}
                     >
-                      Önceki
+                      <span className="hidden sm:inline">Önceki</span>
+                      <span className="sm:hidden">‹</span>
                     </Link>
                   )}
 
-                  {/* Page Numbers */}
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                    <Link
-                      key={page}
-                      href={`/katalog?page=${page}`}
-                      className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                        page === currentPage
-                          ? 'bg-gray-900 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                      scroll={false}
-                    >
-                      {page}
-                    </Link>
-                  ))}
+                  {/* Page Numbers - Show limited on mobile */}
+                  <div className="flex space-x-1 overflow-x-auto max-w-full">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                      // Show all pages on desktop, limited on mobile
+                      const shouldShow = totalPages <= 7 || 
+                        page === 1 || 
+                        page === totalPages || 
+                        (page >= currentPage - 1 && page <= currentPage + 1);
+                      
+                      if (!shouldShow) {
+                        // Show dots for hidden pages
+                        if (page === 2 && currentPage > 4) {
+                          return (
+                            <span key={`dots-${page}`} className="px-2 py-2 text-gray-500">
+                              ...
+                            </span>
+                          );
+                        }
+                        if (page === totalPages - 1 && currentPage < totalPages - 3) {
+                          return (
+                            <span key={`dots-${page}`} className="px-2 py-2 text-gray-500">
+                              ...
+                            </span>
+                          );
+                        }
+                        return null;
+                      }
+
+                      return (
+                        <Link
+                          key={page}
+                          href={`/katalog?page=${page}`}
+                          className={`px-2 py-2 rounded-lg transition-colors duration-200 text-sm sm:text-base sm:px-4 ${
+                            page === currentPage
+                              ? 'bg-gray-900 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                          scroll={false}
+                        >
+                          {page}
+                        </Link>
+                      );
+                    })}
+                  </div>
 
                   {/* Next Button */}
                   {currentPage < totalPages && (
                     <Link
                       href={`/katalog?page=${currentPage + 1}`}
-                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                      className="px-2 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-sm sm:text-base sm:px-4"
                       scroll={false}
                     >
-                      Sonraki
+                      <span className="hidden sm:inline">Sonraki</span>
+                      <span className="sm:hidden">›</span>
                     </Link>
                   )}
                 </div>

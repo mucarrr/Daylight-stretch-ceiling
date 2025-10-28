@@ -8,8 +8,8 @@ export interface CatalogItem {
   features: string[];
 }
 
-// 107 fotoğraf için otomatik oluşturulan katalog verisi
-export const catalogItems: CatalogItem[] = Array.from({ length: 107 }, (_, i) => {
+// 127 fotoğraf için otomatik oluşturulan katalog verisi
+export const catalogItems: CatalogItem[] = Array.from({ length: 127 }, (_, i) => {
   const num = i + 1;
   const categories = ['Lake', 'Baskılı', 'Duvar Kağıdı', 'Lineer Aydınlatma', 'Lightbox', 'Modern', 'Klasik', 'Premium'];
   const category = categories[i % categories.length];
