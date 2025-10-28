@@ -10,11 +10,12 @@ interface ModelCardProps {
   name: string;
   description: string;
   image: string;
+  video?: string;
   slug: string;
   features: string[];
 }
 
-export default function ModelCard({ id, name, description, image, slug, features }: ModelCardProps) {
+export default function ModelCard({ id, name, description, image, video, slug, features }: ModelCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
 
@@ -25,17 +26,33 @@ export default function ModelCard({ id, name, description, image, slug, features
           className="relative h-48 cursor-pointer group"
           onClick={() => setIsModalOpen(true)}
         >
-          <Image
-            src={image}
-            alt={name}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+              {video ? (
+                <video
+                  src={video}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  onTimeUpdate={(e) => {
+                    if (e.currentTarget.currentTime >= 10) {
+                      e.currentTarget.currentTime = 0;
+                    }
+                  }}
+                />
+              ) : (
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          )}
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="bg-white/90 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
-                Büyüt
+                {video ? 'Oynat' : 'Büyüt'}
               </div>
             </div>
           </div>
@@ -71,14 +88,15 @@ export default function ModelCard({ id, name, description, image, slug, features
       </div>
     </div>
 
-    {/* Image Modal */}
-    <ImageModal
-      isOpen={isModalOpen}
-      onClose={() => setIsModalOpen(false)}
-      imageSrc={image}
-      imageAlt={name}
-      title={name}
-    />
+      {/* Image/Video Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={image}
+        imageAlt={name}
+        videoSrc={video}
+        title={name}
+      />
 
     {/* Detail Modal */}
     {isDetailModalOpen && (
@@ -89,16 +107,34 @@ export default function ModelCard({ id, name, description, image, slug, features
         />
         <div className="relative z-10 max-w-4xl max-h-[90vh] w-full mx-4 bg-white rounded-lg overflow-hidden shadow-2xl">
           <div className="flex flex-col lg:flex-row max-h-[90vh]">
-            {/* Image Section */}
+            {/* Image/Video Section */}
             <div className="lg:w-1/2 relative h-64 lg:h-auto">
-              <Image
-                src={image}
-                alt={name}
-                fill
-                className="object-cover"
-                priority
-                quality={95}
-              />
+              {video ? (
+                <video
+                  src={video}
+                  className="w-full h-full object-cover"
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  onTimeUpdate={(e) => {
+                    if (e.currentTarget.currentTime >= 10) {
+                      e.currentTarget.currentTime = 0;
+                    }
+                  }}
+                />
+              ) : (
+                <Image
+                  src={image}
+                  alt={name}
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={95}
+                />
+              )}
             </div>
             
             {/* Content Section */}

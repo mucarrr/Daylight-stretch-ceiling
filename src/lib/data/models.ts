@@ -5,6 +5,7 @@ export interface Model {
   features: string[];
   applications: string[];
   image: string;
+  video?: string;
   slug: string;
 }
 
@@ -28,6 +29,7 @@ export const models: Model[] = [
       'Mağazalar'
     ],
     image: '/images/models/lake.jpeg',
+    video: '/images/models/lake.mp4',
     slug: 'lake-gergi-tavan'
   },
   {

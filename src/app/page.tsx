@@ -77,6 +77,7 @@ export default function Home() {
                 name={model.name}
                 description={model.description}
                 image={model.image}
+                video={model.video}
                 slug={model.slug}
                 features={model.features}
               />

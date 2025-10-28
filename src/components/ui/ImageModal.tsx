@@ -9,11 +9,12 @@ interface ImageModalProps {
   onClose: () => void;
   imageSrc: string;
   imageAlt: string;
+  videoSrc?: string;
   title?: string;
   description?: string;
 }
 
-export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title, description }: ImageModalProps) {
+export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, videoSrc, title, description }: ImageModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -63,18 +64,36 @@ export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title,
           <X size={32} />
         </button>
         
-        {/* Image Container */}
+        {/* Image/Video Container */}
         <div className="relative bg-white rounded-lg overflow-hidden shadow-2xl">
           <div className="relative w-full h-[80vh] min-h-[500px]">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              className="object-contain"
-              priority
-              quality={95}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-            />
+            {videoSrc ? (
+              <video
+                src={videoSrc}
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onTimeUpdate={(e) => {
+                  if (e.currentTarget.currentTime >= 10) {
+                    e.currentTarget.currentTime = 0;
+                  }
+                }}
+              />
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="object-contain"
+                priority
+                quality={95}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+              />
+            )}
           </div>
           
           {/* Title and Description */}

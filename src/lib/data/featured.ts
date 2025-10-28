@@ -51,7 +51,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'featured-006',
     title: 'Eczane Projesi',
-    description: 'Modern ve şık tasarımlı gergi tavan ile tasarlanan eczane. Hijyenik ve profesyonel ortam.',
+    description: 'Duvar ve tavana uygulanan gergiler ile tasarlanan modern eczane. Hijyenik ve profesyonel ortam.',
     image: '/images/featured/fav6.jpeg',
     location: 'Bursa',
     year: '2024'
