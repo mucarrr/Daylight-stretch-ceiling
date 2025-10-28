@@ -114,11 +114,11 @@ export const models: Model[] = [
   },
   {
     id: 'matrix',
-    name: 'Matrix Gergi Tavan',
+    name: 'Matrix Picsel Led',
     description: 'Özel Matrix desenli gergi tavan sistemi ile mekanınıza modern ve şık bir görünüm kazandırın. LED aydınlatma ile entegre çalışır.',
     features: [
       'LED aydınlatma entegrasyonu',
-      'Özel Matrix deseni',
+      'Özel Picsel deseni',
       'Uzaktan kumanda',
       'Renk değiştirme özelliği',
       'Enerji tasarrufu'
