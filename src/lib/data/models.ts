@@ -90,7 +90,7 @@ export const models: Model[] = [
       'Evler',
       'Sergi alanları'
     ],
-    image: '/images/models/linear-aydinlatma.jpeg',
+    image: '/images/featured/fav9.jpeg',
     slug: 'lineer-aydinlatma'
   },
   {
