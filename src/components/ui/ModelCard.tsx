@@ -34,6 +34,7 @@ export default function ModelCard({ id, name, description, image, video, slug, f
                   loop
                   playsInline
                   preload="metadata"
+                  aria-label={`${name} gergi tavan modeli videosu`}
                   onTimeUpdate={(e) => {
                     if (e.currentTarget.currentTime >= 10) {
                       e.currentTarget.currentTime = 0;
@@ -119,6 +120,7 @@ export default function ModelCard({ id, name, description, image, video, slug, f
                   muted
                   playsInline
                   preload="metadata"
+                  aria-label={`${name} gergi tavan modeli detay videosu`}
                   onTimeUpdate={(e) => {
                     if (e.currentTarget.currentTime >= 10) {
                       e.currentTarget.currentTime = 0;

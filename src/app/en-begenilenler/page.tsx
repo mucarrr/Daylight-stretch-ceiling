@@ -14,9 +14,9 @@ export default function EnBegenilenlerPage() {
   } | null>(null);
 
   return (
-    <div className="min-h-screen pt-32">
+    <main className="min-h-screen pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-label="En Beğenilen Projeler Başlık">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -31,7 +31,7 @@ export default function EnBegenilenlerPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16">
+      <section className="py-16" aria-label="Proje Galerisi">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
@@ -78,7 +78,7 @@ export default function EnBegenilenlerPage() {
       </section>
 
       {/* Project Categories */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" aria-label="Proje Kategorileri">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -134,7 +134,7 @@ export default function EnBegenilenlerPage() {
       </section>
 
       {/* Process */}
-      <section className="py-16">
+      <section className="py-16" aria-label="Proje Süreci">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -190,7 +190,7 @@ export default function EnBegenilenlerPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-900 text-white" aria-label="Proje Başlatma">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Sizin Projeniz de Burada Olsun
@@ -226,6 +226,6 @@ export default function EnBegenilenlerPage() {
           title={selectedImage.title}
         />
       )}
-    </div>
+    </main>
   );
 }

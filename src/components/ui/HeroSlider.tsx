@@ -34,6 +34,7 @@ export default function HeroSlider() {
                 muted
                 playsInline
                 preload="metadata"
+                aria-label={heroSlides[0].title}
                 onTimeUpdate={(e) => {
                   if (e.currentTarget.currentTime >= 3) {
                     e.currentTarget.currentTime = 0;
@@ -109,6 +110,7 @@ export default function HeroSlider() {
                 muted
                 playsInline
                 preload="metadata"
+                aria-label={slide.title}
                 onTimeUpdate={(e) => {
                   if (e.currentTarget.currentTime >= 3) {
                     e.currentTarget.currentTime = 0;

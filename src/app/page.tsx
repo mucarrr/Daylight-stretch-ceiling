@@ -1,9 +1,25 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeroSlider from '@/components/ui/HeroSlider';
 import ModelCard from '@/components/ui/ModelCard';
 import FeaturedProjectsSlider from '@/components/ui/FeaturedProjectsSlider';
 import { models } from '@/lib/data/models';
 import { featuredProjects } from '@/lib/data/featured';
+
+export const metadata: Metadata = {
+  title: "Ana Sayfa - Daylight Gergi Tavan | Modern Gergi Tavan Çözümleri",
+  description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün. Lake, baskılı, duvar kağıdı, lineer aydınlatma ve lightbox sistemleri. Uzman montaj hizmeti ve kaliteli malzeme garantisi.",
+  keywords: "gergi tavan, lake gergi tavan, baskılı gergi tavan, duvar kağıdı, lineer aydınlatma, lightbox, tavan sistemleri, gergi tavan fiyatları",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Daylight Gergi Tavan - Modern Gergi Tavan Çözümleri",
+    description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün. Kaliteli malzeme, uzman montaj ve müşteri memnuniyeti odaklı hizmet.",
+    url: 'https://daylightgergitavan.com',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   // İlk 6 modeli göster (Matrix dahil)
@@ -12,12 +28,12 @@ export default function Home() {
   // Slider tüm öne çıkanları gösterecek
 
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <HeroSlider />
 
       {/* Hızlı Tanıtım */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" aria-label="Hızlı Tanıtım">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -58,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Modeller Önizleme */}
-      <section className="py-16">
+      <section className="py-16" aria-label="Gergi Tavan Modelleri">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -96,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* En Beğenilenler - Slider */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" aria-label="En Beğenilen Projeler">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -121,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-900 text-white" aria-label="İletişim Çağrısı">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Projenizi Hayata Geçirin
@@ -146,6 +162,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

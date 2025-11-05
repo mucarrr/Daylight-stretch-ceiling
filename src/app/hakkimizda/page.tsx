@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function HakkimizdaPage() {
   return (
-    <div className="min-h-screen pt-32">
+    <main className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -28,7 +28,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Company Story */}
-      <section className="py-16">
+      <section className="py-16" aria-label="Şirket Hikayesi">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -69,7 +69,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" aria-label="Değerlerimiz">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -125,7 +125,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16">
+      <section className="py-16" aria-label="Neden Bizi Seçmelisiniz">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
@@ -221,6 +221,6 @@ export default function HakkimizdaPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

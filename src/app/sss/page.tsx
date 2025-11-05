@@ -1,16 +1,108 @@
 import type { Metadata } from "next";
+import JsonLd from '@/components/ui/JsonLd';
 
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular - Daylight Gergi Tavan",
   description: "Gergi tavan hizmetlerimiz hakkında sık sorulan sorular ve cevapları. Montaj süresi, fiyatlandırma, garanti ve daha fazlası.",
   keywords: "gergi tavan sss, gergi tavan sorular, gergi tavan montaj süresi, gergi tavan fiyat, gergi tavan garanti",
+  alternates: {
+    canonical: '/sss',
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Gergi tavan montajı ne kadar sürer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Montaj süresi mekanın büyüklüğüne ve seçilen modele göre değişir. Genellikle 1-3 gün arasında tamamlanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi alanlarda gergi tavan uygulayabilirsiniz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evler, ofisler, restoranlar, oteller, mağazalar ve tüm kapalı mekanlarda gergi tavan uygulaması yapabiliriz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fiyatlarınız nasıl belirleniyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fiyatlarımız mekanın büyüklüğü, seçilen model, montaj zorluğu ve ek özellikler göz önünde bulundurularak belirlenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Garanti süreniz ne kadar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tüm işlerimizde 2 yıl garanti veriyoruz. Malzeme ve işçilik garantisi kapsamındadır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gergi tavan temizliği nasıl yapılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gergi tavanlar kolay temizlenebilir malzemeden üretilir. Nemli bez ile silinebilir, özel temizlik maddesi gerektirmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mevcut tavanın altına uygulanabilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, mevcut tavanın altına uygulanabilir. Bu durumda önce mevcut tavanın durumu kontrol edilir ve gerekli önlemler alınır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aydınlatma entegrasyonu yapabilir misiniz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elbette! Spot ışık, LED şerit, avize ve diğer aydınlatma elemanlarını gergi tavana entegre edebiliriz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Özel tasarım yapabilir misiniz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, müşterilerimizin istekleri doğrultusunda özel tasarım ve baskılı gergi tavan uygulamaları yapıyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gergi tavan su geçirir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır, gergi tavanlar tamamen su geçirmez malzemeden üretilir. Su sızıntısı durumunda tavanı korur ve suyu toplar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gergi tavan yanıcı mıdır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gergi tavan malzemelerimiz yangına dayanıklı ve yanıcı olmayan özel malzemelerden üretilmiştir. Güvenlik standartlarına uygundur."
+      }
+    }
+  ]
 };
 
 export default function SSSPage() {
   return (
-    <div className="min-h-screen pt-32">
+    <main className="min-h-screen pt-32">
+      <JsonLd data={faqSchema} />
       {/* Hero Section */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-gray-50" aria-label="SSS Başlık">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -24,7 +116,7 @@ export default function SSSPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-8">
+      <section className="py-8" aria-label="Sık Sorulan Sorular">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="bg-white rounded-lg p-6 shadow-lg">
@@ -246,6 +338,6 @@ export default function SSSPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

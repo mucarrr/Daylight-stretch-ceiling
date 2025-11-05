@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function IletisimPage() {
   return (
-    <div className="min-h-screen pt-32">
+    <main className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -26,7 +26,7 @@ export default function IletisimPage() {
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-8">
+      <section className="py-8" aria-label="İletişim Bilgileri ve Form">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -105,7 +105,7 @@ export default function IletisimPage() {
       </section>
 
       {/* Services */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-gray-50" aria-label="Hizmetlerimiz">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -160,6 +160,6 @@ export default function IletisimPage() {
         </div>
       </section>
 
-    </div>
+    </main>
   );
 }

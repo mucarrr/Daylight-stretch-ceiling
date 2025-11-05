@@ -46,9 +46,9 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
 
 
   return (
-    <div className="min-h-screen pt-28">
+    <main className="min-h-screen pt-28">
       {/* Hero Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50" aria-label="Katalog Başlık">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -63,7 +63,7 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-12">
+      <section className="py-12" aria-label="Gergi Tavan Galerisi">
         <div className="container mx-auto px-4">
           {currentItems.length > 0 ? (
             <>
@@ -203,7 +203,7 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-gray-900 text-white">
+      <section className="py-12 bg-gray-900 text-white" aria-label="Teklif Alma">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Beğendiğiniz Ürün İçin Teklif Alın
@@ -231,6 +231,6 @@ export default function CatalogPage({ searchParams }: CatalogPageProps) {
           title={selectedImage.title}
         />
       )}
-    </div>
+    </main>
   );
 }

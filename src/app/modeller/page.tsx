@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ModellerPage() {
   return (
-    <div className="min-h-screen pt-32">
+    <main className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -30,6 +30,6 @@ export default function ModellerPage() {
 
       {/* Client Component */}
       <ModellerClient />
-    </div>
+    </main>
   );
 }

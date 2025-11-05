@@ -37,6 +37,7 @@ export default function ModellerClient() {
                         loop
                         playsInline
                         preload="metadata"
+                        aria-label={`${model.name} gergi tavan modeli videosu`}
                         onTimeUpdate={(e) => {
                           if (e.currentTarget.currentTime >= 10) {
                             e.currentTarget.currentTime = 0;
