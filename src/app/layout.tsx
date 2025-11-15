@@ -31,20 +31,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://daylight-phi.vercel.app'),
+  metadataBase: new URL('https://daylightgergitavan.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Daylight Gergi Tavan - Modern Gergi Tavan Çözümleri",
     description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün. Kaliteli malzeme, uzman montaj ve müşteri memnuniyeti odaklı hizmet.",
-    url: 'https://daylight-phi.vercel.app',
+    url: 'https://daylightgergitavan.com',
     siteName: 'Daylight Gergi Tavan',
     locale: 'tr_TR',
     type: 'website',
     images: [
       {
-        url: 'https://daylight-phi.vercel.app/image.png',
+        url: 'https://daylightgergitavan.com/image.png',
         width: 300,
         height: 120,
         alt: 'Daylight Gergi Tavan Logo',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Daylight Gergi Tavan - Modern Gergi Tavan Çözümleri",
     description: "Modern gergi tavan çözümleri ile mekanlarınızı dönüştürün.",
-    images: ['https://daylight-phi.vercel.app/image.png'],
+    images: ['https://daylightgergitavan.com/image.png'],
   },
   robots: {
     index: true,
