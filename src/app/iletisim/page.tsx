@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "İletişim - Daylight Gergi Tavan",
   description: "Daylight Gergi Tavan ile iletişime geçin. Ücretsiz keşif, teklif ve danışmanlık hizmeti için bize ulaşın. Telefon: +90 506 150 98 41",
   keywords: "gergi tavan iletişim, gergi tavan teklif, gergi tavan keşif, daylight gergi tavan telefon",
+  alternates: {
+    canonical: '/iletisim',
+  },
+  openGraph: {
+    title: "İletişim - Daylight Gergi Tavan",
+    description: "Daylight Gergi Tavan ile iletişime geçin. Ücretsiz keşif, teklif ve danışmanlık hizmeti için bize ulaşın.",
+    url: 'https://daylightgergitavan.com/iletisim',
+    type: 'website',
+  },
 };
 
 export default function IletisimPage() {

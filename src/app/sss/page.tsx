@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/sss',
   },
+  openGraph: {
+    title: "Sık Sorulan Sorular - Daylight Gergi Tavan",
+    description: "Gergi tavan hizmetlerimiz hakkında sık sorulan sorular ve cevapları. Montaj süresi, fiyatlandırma, garanti ve daha fazlası.",
+    url: 'https://daylightgergitavan.com/sss',
+    type: 'website',
+  },
 };
 
 const faqSchema = {

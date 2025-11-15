@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Hakkımızda - Daylight Gergi Tavan",
   description: "Daylight Gergi Tavan hakkında bilgi alın. 10+ yıllık deneyim, kaliteli malzeme, uzman montaj ve müşteri memnuniyeti odaklı hizmet anlayışımız.",
   keywords: "daylight gergi tavan hakkında, gergi tavan firması, gergi tavan montaj, kaliteli gergi tavan",
+  alternates: {
+    canonical: '/hakkimizda',
+  },
+  openGraph: {
+    title: "Hakkımızda - Daylight Gergi Tavan",
+    description: "Daylight Gergi Tavan hakkında bilgi alın. 10+ yıllık deneyim, kaliteli malzeme, uzman montaj ve müşteri memnuniyeti odaklı hizmet anlayışımız.",
+    url: 'https://daylightgergitavan.com/hakkimizda',
+    type: 'website',
+  },
 };
 
 export default function HakkimizdaPage() {

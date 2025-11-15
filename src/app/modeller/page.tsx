@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "Gergi Tavan Modelleri - Daylight Gergi Tavan",
   description: "Lake, baskılı, duvar kağıdı, lineer aydınlatma ve lightbox gergi tavan modellerimizi inceleyin. Her mekana uygun çözümler.",
   keywords: "gergi tavan modelleri, lake gergi tavan, baskılı gergi tavan, duvar kağıdı, lineer aydınlatma, lightbox",
+  alternates: {
+    canonical: '/modeller',
+  },
+  openGraph: {
+    title: "Gergi Tavan Modelleri - Daylight Gergi Tavan",
+    description: "Lake, baskılı, duvar kağıdı, lineer aydınlatma ve lightbox gergi tavan modellerimizi inceleyin. Her mekana uygun çözümler.",
+    url: 'https://daylightgergitavan.com/modeller',
+    type: 'website',
+  },
 };
 
 export default function ModellerPage() {
