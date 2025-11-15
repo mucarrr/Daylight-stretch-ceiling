@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daylightgergitavan.com/sitemap.xml
+Sitemap: https://www.daylightgergitavan.com/sitemap.xml
