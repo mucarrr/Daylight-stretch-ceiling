@@ -114,6 +114,7 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
+        <meta name="google-site-verification" content="drvWgpIAiLCha_BRkj6O5od8oWKCRcKHMV3bgG2R8_c" />
         <JsonLd data={organizationSchema} />
       </head>
       <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
